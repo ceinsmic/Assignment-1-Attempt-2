@@ -6,6 +6,7 @@ import './App.css'
 
 function App() {
   const [count, setCount] = useState(0)
+  const [tick, setticks] = useState(0)
 
   return (
     <>
@@ -24,7 +25,10 @@ function App() {
         <button
           type="button"
           className="counter"
-          onClick={() => setCount((count) => count + 1)}
+          onClick={() => {
+            setCount((count) => count + 1)
+            setticks((tick) => tick + 1)
+          }}
         >
           Count is {count}
         </button>
